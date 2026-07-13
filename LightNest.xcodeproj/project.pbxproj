@@ -476,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nestingsinlights.LightNest.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = light_profile;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = lightpush_profile;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -510,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nestingsinlights.LightNest.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = light_profile;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = lightpush_profile;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
