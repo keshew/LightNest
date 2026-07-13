@@ -2,6 +2,7 @@ import SwiftUI
 
 @main
 struct LightNestApp: App {
+    @UIApplicationDelegateAdaptor(LightNestAppDelegate.self) private var appDelegate
     @StateObject private var appState = AppState()
     @StateObject private var projectVM = ProjectViewModel()
     @StateObject private var roomVM = RoomViewModel()
@@ -11,7 +12,7 @@ struct LightNestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            SplashView()
                 .environmentObject(appState)
                 .environmentObject(projectVM)
                 .environmentObject(roomVM)
@@ -19,17 +20,12 @@ struct LightNestApp: App {
                 .environmentObject(fixtureVM)
         }
     }
-
 }
 
 struct RootView: View {
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
-    @State private var showSplash = true
-    @State private var showOnboarding = false
-    @State private var showMain = false
-    
     @AppStorage("appTheme") private var appTheme = "dark"
-    
+
     private var colorScheme: ColorScheme? {
         switch appTheme {
         case "dark": return .dark
@@ -40,30 +36,14 @@ struct RootView: View {
 
     var body: some View {
         ZStack {
-            if showSplash {
-                SplashView(onFinish: {
-                    withAnimation(.easeInOut(duration: 1.5)) {
-                        showSplash = false
-                        if hasCompletedOnboarding {
-                            showMain = true
-                        } else {
-                            showOnboarding = true
-                        }
-                    }
-                })
-                .transition(.opacity)
-            } else if showOnboarding {
-                OnboardingContainerView(onComplete: {
-                    hasCompletedOnboarding = true
-                    withAnimation(.easeInOut(duration: 0.4)) {
-                        showOnboarding = false
-                        showMain = true
-                    }
-                })
-                .transition(.opacity)
-            } else if showMain {
+            if hasCompletedOnboarding {
                 MainTabView()
                     .transition(.opacity)
+            } else {
+                OnboardingContainerView(onComplete: {
+                    hasCompletedOnboarding = true
+                })
+                .transition(.opacity)
             }
         }
         .preferredColorScheme(colorScheme)

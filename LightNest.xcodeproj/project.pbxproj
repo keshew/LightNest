@@ -6,8 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BBA100030000000000000001 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = BBA100020000000000000001 /* AppsFlyerLib */; };
+		BBA100030000000000000002 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = BBA100020000000000000002 /* FirebaseCore */; };
+		BBA100030000000000000003 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BBA100020000000000000003 /* FirebaseMessaging */; };
+		BBA100030000000000000004 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BBA100020000000000000004 /* FirebaseMessaging */; };
+		BBA100030000000000000005 /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BBA100040000000000000001 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBA1000C0000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F6A61AE2FB921C8000CE08A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBA1000B0000000000000001;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BBA1000A0000000000000001 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BBA100030000000000000005 /* NotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8F6A61B62FB921C8000CE08A /* LightNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA100040000000000000001 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +50,13 @@
 				Info.plist,
 			);
 			target = 8F6A61B52FB921C8000CE08A /* LightNest */;
+		};
+		BBA100050000000000000001 /* Exceptions for "NotificationService" folder in "NotificationService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BBA1000B0000000000000001 /* NotificationService */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,6 +69,14 @@
 			path = LightNest;
 			sourceTree = "<group>";
 		};
+		BBA100060000000000000001 /* NotificationService */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BBA100050000000000000001 /* Exceptions for "NotificationService" folder in "NotificationService" target */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +84,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA100030000000000000001 /* AppsFlyerLib in Frameworks */,
+				BBA100030000000000000002 /* FirebaseCore in Frameworks */,
+				BBA100030000000000000003 /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBA100070000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA100030000000000000004 /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				8F6A61B82FB921C8000CE08A /* LightNest */,
+				BBA100060000000000000001 /* NotificationService */,
 				8F6A61B72FB921C8000CE08A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8F6A61B62FB921C8000CE08A /* LightNest.app */,
+				BBA100040000000000000001 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,20 +129,48 @@
 				8F6A61B22FB921C8000CE08A /* Sources */,
 				8F6A61B32FB921C8000CE08A /* Frameworks */,
 				8F6A61B42FB921C8000CE08A /* Resources */,
+				BBA1000A0000000000000001 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BBA1000D0000000000000001 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8F6A61B82FB921C8000CE08A /* LightNest */,
 			);
 			name = LightNest;
 			packageProductDependencies = (
+				BBA100020000000000000001 /* AppsFlyerLib */,
+				BBA100020000000000000002 /* FirebaseCore */,
+				BBA100020000000000000003 /* FirebaseMessaging */,
 			);
 			productName = LightNest;
 			productReference = 8F6A61B62FB921C8000CE08A /* LightNest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BBA1000B0000000000000001 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBA1000F0000000000000001 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				BBA100080000000000000001 /* Sources */,
+				BBA100070000000000000001 /* Frameworks */,
+				BBA100090000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BBA100060000000000000001 /* NotificationService */,
+			);
+			name = NotificationService;
+			packageProductDependencies = (
+				BBA100020000000000000004 /* FirebaseMessaging */,
+			);
+			productName = NotificationService;
+			productReference = BBA100040000000000000001 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +185,9 @@
 					8F6A61B52FB921C8000CE08A = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					BBA1000B0000000000000001 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 8F6A61B12FB921C8000CE08A /* Build configuration list for PBXProject "LightNest" */;
@@ -107,18 +199,30 @@
 			);
 			mainGroup = 8F6A61AD2FB921C8000CE08A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BBA100010000000000000001 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				BBA100010000000000000002 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F6A61B72FB921C8000CE08A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8F6A61B52FB921C8000CE08A /* LightNest */,
+				BBA1000B0000000000000001 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8F6A61B42FB921C8000CE08A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBA100090000000000000001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BBA100080000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBA1000D0000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBA1000B0000000000000001 /* NotificationService */;
+			targetProxy = BBA1000C0000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8F6A61C02FB921C9000CE08A /* Debug */ = {
@@ -265,6 +384,7 @@
 				INFOPLIST_FILE = LightNest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Light Nest";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to use your camera in application to provide all functionality.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Pulse Wave uses tracking data to enhance app functionality, improve performance and usability, understand user interaction with features, and support continuous updates and optimization. This information also helps maintain app reliability, stability, and security.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -279,7 +399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nestingsinlights.LightNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -306,6 +426,7 @@
 				INFOPLIST_FILE = LightNest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Light Nest";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to use your camera in application to provide all functionality.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Pulse Wave uses tracking data to enhance app functionality, improve performance and usability, understand user interaction with features, and support continuous updates and optimization. This information also helps maintain app reliability, stability, and security.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -320,7 +441,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nestingsinlights.LightNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -331,6 +452,74 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+		BBA1000E0000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 54485NZ9PM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestingsinlights.LightNest.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = light_profile;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BBA1000E0000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 54485NZ9PM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestingsinlights.LightNest.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = light_profile;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -355,7 +544,58 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BBA1000F0000000000000001 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBA1000E0000000000000001 /* Debug */,
+				BBA1000E0000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBA100010000000000000001 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.18.0;
+			};
+		};
+		BBA100010000000000000002 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBA100020000000000000001 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBA100010000000000000001 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		BBA100020000000000000002 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBA100010000000000000002 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		BBA100020000000000000003 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBA100010000000000000002 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		BBA100020000000000000004 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBA100010000000000000002 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F6A61AE2FB921C8000CE08A /* Project object */;
 }

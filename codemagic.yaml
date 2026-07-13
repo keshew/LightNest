@@ -4,13 +4,13 @@
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: LightNest_apikey
+      app_store_connect: lightkey
     environment:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.nestingsinlights.LightNest
       vars:
-        APP_STORE_CONNECT_KEY: LightNest_apikey
+        APP_STORE_CONNECT_KEY: lightkey
         APP_STORE_APPLE_ID: 6783971472
         BUNDLE_ID: "com.nestingsinlights.LightNest"
         XCODE_PROJECT: "LightNest.xcodeproj"
